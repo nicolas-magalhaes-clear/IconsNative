@@ -1,11 +1,18 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Ionicons, FontAwesome } from '@expo/vector-icons';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      
+    <FontAwesome name='home' size={35} color='#11118C'/>
+    <FontAwesome name='user' size={25} color='#54a300'/>
+
+    <TouchableOpacity style={styles.btnYoutube}>
+      <FontAwesome name='youtube' size={25} color='#fff'/>
+      <Text style={styles.btnText}>Acessar canal</Text>
+    </TouchableOpacity>
+
     </View>
   );
 }
@@ -17,4 +24,16 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  btnYoutube: {
+    backgroundColor: 'red',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 5,
+    borderRadius: 5,
+    gap: 4
+  },
+  btnText: {
+    color: 'white',
+  }
 });
